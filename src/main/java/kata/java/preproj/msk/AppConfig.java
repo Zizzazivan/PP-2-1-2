@@ -1,3 +1,5 @@
+package kata.java.preproj.msk;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -10,5 +12,13 @@ public class AppConfig {
         HelloWorld helloWorld = new HelloWorld();
         helloWorld.setMessage("Hello World!");
         return helloWorld;
+    }
+    @Scope("prototype")
+    @Bean(name = "cat")
+    public Cat getCat() {
+        Cat cat = new Cat();
+        cat.setAge(1);
+        cat.setName("kata.java.preproj.msk.Cat");
+        return cat;
     }
 }

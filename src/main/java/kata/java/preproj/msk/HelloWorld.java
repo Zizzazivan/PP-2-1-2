@@ -1,3 +1,5 @@
+package kata.java.preproj.msk;
+
 public class HelloWorld {
  
     private String message;
